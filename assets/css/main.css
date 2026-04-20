@@ -2024,6 +2024,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
+
 	header p {
 		color: #999;
 		margin: 0 0 1.5em 0;
@@ -2407,8 +2408,13 @@ input, select, textarea {
 			width: 100%;
 		}
 
-			.image.fit img {
+			.image.fit img,
+			.image.fit video {
 				width: 100%;
+				height: auto;
+				max-width: 1000px;
+				display: block;
+				margin: 0 auto;
 			}
 
 /* List */
@@ -2485,10 +2491,10 @@ input, select, textarea {
 			margin: 0;
 		}
 		ul.actions.special {
-			-moz-justify-content: right;
-			-webkit-justify-content: right;
-			-ms-justify-content: right;
-			justify-content: right;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
 			width: 100%;
 			margin-left: 0;
 		}
@@ -2871,7 +2877,7 @@ input, select, textarea {
 		/*Cardápio*/
 		.main.style9 {
 			background: #1a1a1a;
-			background-image: url("images/cardapiov4.png");
+			background-image: url("images/Arte\ modulosV2.png");
 			background-repeat: no-repeat;
 			background-position: center center; /* centraliza horizontal e verticalmente */
 			background-size: cover; /* opcional: cobre todo o elemento */
@@ -2889,7 +2895,7 @@ input, select, textarea {
 		/*Imagem 4*/
 		.main.style8 {
 			background: #fff;
-			background-image: url("images/appv11.png");
+			background-image: url("images/Render\ Mapa\ V12\ -\ cycles\ -\ 4K.png");
 			background-repeat: no-repeat;
 			background-position: center center; /* centraliza horizontal e verticalmente */
 			background-size: cover; /* opcional: cobre todo o elemento */
@@ -2900,8 +2906,9 @@ input, select, textarea {
 		.main.style2 {
 			background-color: #333;
 			color: rgba(255, 255, 255, 0.75);
-			background-attachment: fixed,							fixed;
-			background-image: url("images/APP3.png"), url("images/arte.png");
+			background-attachment: fixed,fixed;
+			background-image: url("images/Render\ Cycles\ V1\ -\ Optmix.png");
+			
 			background-size: auto,							cover;
 		}
 
@@ -2995,7 +3002,6 @@ input, select, textarea {
 	/*Image 1*/
 	/*background-attachment: fixed;*/
 	/*background-image: url("images/arte.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);*/
-	background-image: url("images/arte.png"); /* ajuste a extensão se for .png ou .webp */
 	background-position: center center;
 	background-size: cover;
 	overflow: hidden;
@@ -3003,6 +3009,20 @@ input, select, textarea {
 	text-align: center;
 }
 
+#header video.header-bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+#header .inner {
+	position: relative;
+	z-index: 1;
+}
 
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
@@ -3122,6 +3142,8 @@ input, select, textarea {
 			height: auto;
 			display: block;
 			margin: 0 auto;
+			position: relative;
+			z-index: 2;
 			}
 
 
